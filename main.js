@@ -1,9 +1,10 @@
 // main.js
 function generateGraph() {
-      const solver = document.getElementById('solver').value;
+      const general = document.getElementById('general').value;
+      const simulation = document.getElementById('simulation').value;
       const hda = document.getElementById('hda').value;
       const pipeline = document.getElementById('pipeline').value;
-      const technical = document.getElementById('technical').value;
+      const rendering = document.getElementById('rendering').value;
 
       const ctx = document.getElementById('abilityChart').getContext('2d');
       if (window.myChart) {
@@ -12,10 +13,10 @@ function generateGraph() {
       window.myChart = new Chart(ctx, {
         type: 'radar',
         data: {
-          labels: ['Solver', 'HDAs', 'Pipeline', 'Technical'],
+          labels: ['general', 'simulation', 'hda', 'pipeline', 'rendering'],
           datasets: [{
             label: 'Abilities',
-            data: [solver, hda, pipeline, technical],
+            data: [general, simulation, hda, pipeline, rendering],
             fill: true,
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             borderColor: 'rgba(54, 162, 235, 1)',
@@ -26,13 +27,10 @@ function generateGraph() {
           scales: {
             r: {
               suggestedMin: 0,
-              suggestedMax: 5
+              suggestedMax: 3
             }
           }
         }
       });
     }
 
-function check(name){
-
-}

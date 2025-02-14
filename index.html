@@ -6,53 +6,87 @@
     <script src="main.js" defer></script>
     <link rel="stylesheet" type="text/css" href="default.css"/>
 </head>
-<body >
- <div class="main">
+<body>
+<div class="main">
 
-      <div class="form">
+    <div class="form">
         <h2>What is your Houdini power?</h2>
-          <div>
-              <h3>Fundamentals</h3>
-              <table>
-                  <tr>
-                      <td onclick="check('technical_basic')">
-                          Familiar with the interface
-                      </td >
-                      <td>
-                          <input type="checkbox" id="interface" name="fundamental" value="0.1">
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          Simulate Cloth / Fur / Muscle
-                      </td>
-                      <td>
-                          <input type="checkbox" id="sim_basic" name="fundamental" value="0.1">
-                      </td>
-                  </tr>
-              </table>
-          </div>
-          <div><button type="button" onclick="generateGraph()">Do tell</button></div>
-        <form id="abilityForm">
+        <div>
 
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <table>
+                <tr>
+                    <td>
+                         <h4>General</h4>
+                    </td>
+                    <td>
+                        <select name="general" id="general">
+                            <option value="0">I'm happily new!</option>
+                            <option value="1">I'm familiar with the interface, I am comfortable navigating around.</option>
+                            <option value="2">I am comfortable with using some hscript / pythong / VEX</option>
+                            <option value="3">I can write a custom deformer with VEX / VOP / Python / OpenCL</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <h4>Simulation</h4>
+                    </td>
+                    <td>
+                        <select name="simulation" id="simulation">
+                            <option value="0">No experience</option>
+                            <option value="1">I can use existing setup, tweak some constraints properties.</option>
+                            <option value="2">I am comfortable adding custom setup inside DOP</option>
+                            <option value="3">I can create custom solvers with optimisation in mind</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <h4>HDAs</h4>
+                    </td>
+                    <td>
+                        <select name="hda" id="hda">
+                            <option value="0">No experience</option>
+                            <option value="1">I can add</option>
+                            <option value="2">I am comfortable adding custom setup inside DOP</option>
+                            <option value="3">I can create custom solvers with optimisation in mind</option>
+                            <option value="4">I still call it OTL</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <h4>Pipeline</h4>
+                    </td>
+                    <td>
+                        <select name="pipeline" id="pipeline">
+                            <option value="0">No experience</option>
+                            <option value="1">I can add</option>
+                            <option value="2">I am comfortable adding custom setup inside DOP</option>
+                            <option value="3">I can create custom solvers with optimisation in mind</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <h4>Rendering</h4>
+                    </td>
+                    <td>
+                        <select name="rendering" id="rendering">
+                            <option value="0">No experience</option>
+                            <option value="1">I can add</option>
+                            <option value="2">I am comfortable adding custom setup inside DOP</option>
+                            <option value="3">I can create custom solvers with optimisation in mind</option>
+                        </select>
+                    </td>
+                </tr>
 
-            <label for="vehicle1" > I have a bike</label><br>
+            </table>
+        </div>
+        <div>
+            <button type="button" onclick="generateGraph()">Do tell</button>
+        </div>
 
-            <label for="solver">Solver (0-5):</label>
-            <input type="number" id="solver" min="0" max="5" value="5"><br><br>
-
-            <label for="pipeline">Pipeline (0-5):</label>
-            <input type="number" id="pipeline" min="0" max="5" value="5"><br><br>
-
-            <label for="hda">HDAs (0-10):</label>
-            <input type="number" id="hda" min="0" max="5" value="5"><br><br>
-
-            <label for="technical">technical (0-10):</label>
-            <input type="number" id="technical" min="0" max="10" value="5"><br><br>
-
-
-        </form>
     </div>
     <div class="result">
         <div class="chart">
