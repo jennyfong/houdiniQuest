@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ability Graph Generator</title>
-  <script src="chart.js"></script>
-  <script src="main.js" defer></script>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    canvas { max-width: 500px; max-height: 500px; }
-  </style>
+    <title>Ability Graph Generator</title>
+    <script src="chart.js"></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="default.css"/>
 </head>
 <body>
-  <h2>Ability Graph Generator</h2>
-  <form id="abilityForm">
-    <label for="strength">Strength (0-10):</label>
-    <input type="number" id="strength" min="0" max="10" value="5"><br><br>
+ <div class="main">
 
-    <label for="agility">Agility (0-10):</label>
-    <input type="number" id="agility" min="0" max="10" value="5"><br><br>
+      <div class="form">
+        <h2>Ability Graph Generator</h2>
+        <form id="abilityForm">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
 
-    <label for="intelligence">Intelligence (0-10):</label>
-    <input type="number" id="intelligence" min="0" max="10" value="5"><br><br>
+            <label for="strength">Strength (0-10):</label>
+            <input type="number" id="strength" min="0" max="10" value="5"><br><br>
 
-    <label for="charisma">Charisma (0-10):</label>
-    <input type="number" id="charisma" min="0" max="10" value="5"><br><br>
+            <label for="agility">Agility (0-10):</label>
+            <input type="number" id="agility" min="0" max="10" value="5"><br><br>
 
-    <button type="button" onclick="generateGraph()">Generate Graph</button>
-  </form>
+            <label for="intelligence">Intelligence (0-10):</label>
+            <input type="number" id="intelligence" min="0" max="10" value="5"><br><br>
 
-  <canvas id="abilityChart"></canvas>
+            <label for="charisma">Charisma (0-10):</label>
+            <input type="number" id="charisma" min="0" max="10" value="5"><br><br>
 
-  <script>
+            <button type="button" onclick="generateGraph()">Generate Graph</button>
+        </form>
+    </div>
+    <div class="result">
+        <div class="chart">
+            <canvas id="abilityChart"></canvas>
+        </div>
+        <div class="result-image" id="beginner" hidden="hidden">Beginner</div>
+    </div>
+</div>
 
-  </script>
 </body>
 </html>
