@@ -2,32 +2,57 @@
 <html>
 <head>
     <title>Ability Graph Generator</title>
+    <script src="jquery-3.7.1.slim.min.js"></script>
     <script src="chart.js"></script>
     <script src="main.js" defer></script>
     <link rel="stylesheet" type="text/css" href="default.css"/>
 </head>
-<body>
+<body >
  <div class="main">
 
       <div class="form">
-        <h2>Ability Graph Generator</h2>
+        <h2>What is your Houdini power?</h2>
+          <div>
+              <h3>Fundamentals</h3>
+              <table>
+                  <tr>
+                      <td onclick="check('technical_basic')">
+                          Familiar with the interface
+                      </td >
+                      <td>
+                          <input type="checkbox" id="interface" name="fundamental" value="0.1">
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          Simulate Cloth / Fur / Muscle
+                      </td>
+                      <td>
+                          <input type="checkbox" id="sim_basic" name="fundamental" value="0.1">
+                      </td>
+                  </tr>
+              </table>
+          </div>
+          <div><button type="button" onclick="generateGraph()">Do tell</button></div>
         <form id="abilityForm">
+
             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-            <label for="vehicle1"> I have a bike</label><br>
 
-            <label for="strength">Strength (0-10):</label>
-            <input type="number" id="strength" min="0" max="10" value="5"><br><br>
+            <label for="vehicle1" > I have a bike</label><br>
 
-            <label for="agility">Agility (0-10):</label>
-            <input type="number" id="agility" min="0" max="10" value="5"><br><br>
+            <label for="solver">Solver (0-5):</label>
+            <input type="number" id="solver" min="0" max="5" value="5"><br><br>
 
-            <label for="intelligence">Intelligence (0-10):</label>
-            <input type="number" id="intelligence" min="0" max="10" value="5"><br><br>
+            <label for="pipeline">Pipeline (0-5):</label>
+            <input type="number" id="pipeline" min="0" max="5" value="5"><br><br>
 
-            <label for="charisma">Charisma (0-10):</label>
-            <input type="number" id="charisma" min="0" max="10" value="5"><br><br>
+            <label for="hda">HDAs (0-10):</label>
+            <input type="number" id="hda" min="0" max="5" value="5"><br><br>
 
-            <button type="button" onclick="generateGraph()">Generate Graph</button>
+            <label for="technical">technical (0-10):</label>
+            <input type="number" id="technical" min="0" max="10" value="5"><br><br>
+
+
         </form>
     </div>
     <div class="result">

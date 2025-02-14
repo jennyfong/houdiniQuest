@@ -1,11 +1,13 @@
 body{
-    font-family: Arial, sans-serif;
+    font-family: monospace;
     padding: 20px;
+    background-color: #1E1F22;
+    color: #CCCFD4;
 }
 canvas{
     max-width: 500px;
     max-height: 500px;
 }
 .main{
-    background-color: coral;
+
 }

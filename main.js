@@ -1,9 +1,9 @@
 // main.js
 function generateGraph() {
-      const strength = document.getElementById('strength').value;
-      const agility = document.getElementById('agility').value;
-      const intelligence = document.getElementById('intelligence').value;
-      const charisma = document.getElementById('charisma').value;
+      const solver = document.getElementById('solver').value;
+      const hda = document.getElementById('hda').value;
+      const pipeline = document.getElementById('pipeline').value;
+      const technical = document.getElementById('technical').value;
 
       const ctx = document.getElementById('abilityChart').getContext('2d');
       if (window.myChart) {
@@ -12,10 +12,10 @@ function generateGraph() {
       window.myChart = new Chart(ctx, {
         type: 'radar',
         data: {
-          labels: ['Strength', 'Agility', 'Intelligence', 'Charisma'],
+          labels: ['Solver', 'HDAs', 'Pipeline', 'Technical'],
           datasets: [{
             label: 'Abilities',
-            data: [strength, agility, intelligence, charisma],
+            data: [solver, hda, pipeline, technical],
             fill: true,
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
             borderColor: 'rgba(54, 162, 235, 1)',
@@ -26,9 +26,13 @@ function generateGraph() {
           scales: {
             r: {
               suggestedMin: 0,
-              suggestedMax: 10
+              suggestedMax: 5
             }
           }
         }
       });
     }
+
+function check(name){
+
+}
