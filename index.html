@@ -11,7 +11,26 @@
 </head>
 <body>
   <h2>Ability Graph Generator</h2>
-  <form id="abilityForm"></form>
+  <form id="abilityForm">
+    <label for="strength">Strength (0-10):</label>
+    <input type="number" id="strength" min="0" max="10" value="5"><br><br>
+
+    <label for="agility">Agility (0-10):</label>
+    <input type="number" id="agility" min="0" max="10" value="5"><br><br>
+
+    <label for="intelligence">Intelligence (0-10):</label>
+    <input type="number" id="intelligence" min="0" max="10" value="5"><br><br>
+
+    <label for="charisma">Charisma (0-10):</label>
+    <input type="number" id="charisma" min="0" max="10" value="5"><br><br>
+
+    <button type="button" onclick="generateGraph()">Generate Graph</button>
+  </form>
+
   <canvas id="abilityChart"></canvas>
+
+  <script>
+
+  </script>
 </body>
 </html>
